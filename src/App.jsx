@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import NavBar from './components/organisms/Navbar';
 import Home from './pages/Home';
+import footer from './components/organisms/footer';
 
 function App() {
  return (

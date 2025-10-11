@@ -1,6 +1,6 @@
 import { Container } from 'react-bootstrap';
 
-function Home() {
+function Products() {
  return (
    <Container className="my-5">
      <h1>Página de Productos farmaceuticos</h1>
@@ -9,4 +9,4 @@ function Home() {
  );
 }
 
-export default Home;
+export default Products;

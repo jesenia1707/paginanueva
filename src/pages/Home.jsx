@@ -7,6 +7,6 @@ function Home() {
      <p>Bienvenidos a nuestro sitio web.</p>
    </Container>
  );
-}
+} 
 
 export default Home;

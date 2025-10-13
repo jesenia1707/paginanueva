@@ -1,0 +1,18 @@
+.button {
+  padding: var(--space-sm) var(--space-md);
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button--primary {
+  background: var(--primary-blue);
+  color: var(--primary-white);
+}
+
+.button--secondary {
+  background: var(--primary-green);
+  color: var(--primary-white);
+}

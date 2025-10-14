@@ -6,6 +6,9 @@ function NotFound() {
     <Container className="my-5">
       <h1>Página no encontrada</h1>
       <p>¿Estás seguro de que era aquí?</p>
+      <p>¿Estás seguro de que era aquí?</p>
+      <p>¿Estás seguro de que era aquí?</p>
+      <p>¿Estás seguro de que era aquí?</p>
     </Container>
   );
 }

@@ -1,6 +1,6 @@
 import { Container } from 'react-bootstrap';
-import '../Home.css';
-
+import '../styles/Home.css';
+import '../styles/Footer.css';
 
 function Home() {
  return (
@@ -36,7 +36,7 @@ function Home() {
       <div className="container">
         <div className="card">
           <div className="card-img">
-            <img src="assets/img/Medicamentos/Paracetamol.webp" alt="Paracetamol" />
+            <img src="./assets/img/Medicamentos/Paracetamol.webp" alt="Paracetamol" />
           </div>
           <div className="card-content">
             <h3 className="card-title">Paracetamol 80 mg</h3>
@@ -49,7 +49,7 @@ function Home() {
 
         <div className="card">
           <div className="card-img">
-            <img src="assets/img/Medicamentos/Ibuprofeno.webp" alt="Ibuprofeno" />
+            <img src="../assets/img/Medicamentos/Ibuprofeno.webp" alt="Ibuprofeno" />
           </div>
           <div className="card-content">
             <h3 className="card-title">Ibuprofeno 600 mg</h3>
@@ -88,12 +88,10 @@ function Home() {
 
       <footer>
         <div className="containerFooter">
-          <div className="containerFooter">
-            <div className="footer-column">
-              <h3><strong>eFarmaNet</strong></h3>
-              <p>Tu farmacia de confianza online, cuidando de tu salud y bienestar desde 2025.</p>
-              <p>&copy; 2025 <strong>eFarmaNet</strong> - Todos los derechos reservados</p>
-            </div>
+          <div className="footer-column">
+            <h3><strong>eFarmaNet</strong></h3>
+            <p>Tu farmacia de confianza online, cuidando de tu salud y bienestar desde 2025.</p>
+            <p>&copy; 2025 <strong>eFarmaNet</strong> - Todos los derechos reservados</p>
           </div>
         </div>
       </footer>

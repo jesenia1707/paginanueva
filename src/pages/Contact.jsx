@@ -1,12 +1,72 @@
+import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
+import Text from '../components/atoms/Text.jsx';
+import Button from '../components/atoms/Button.jsx'; // Importar tu componente Button
+import { useNavigate } from 'react-router-dom';
+function Contact() {
+    // Estado inicial basado en los IDs de los inputs
+    const initialFormData = {
+        name: '',
+        email: '',
+        mensaje: '',
+    };
 
-export function Contact() {
- return (
-   <Container className="my-5">
-     <h1>Página de <strong>CONTACTO</strong></h1>
-     <p>Bienvenidos a nuestro sitio web.</p>
-   </Container>
- );
+    const [formData, setFormData] = useState(initialFormData);
+
+    const formInputs = [
+        {
+            id: 'name',
+            type: 'text',
+            label: 'Nombre',
+            placeholder: 'Ingresa tu nombre',
+            value: formData.name,
+            onChange: (e) => setFormData({ ...formData, name: e.target.value }),
+        },
+        {
+            id: 'email',
+            type: 'email',
+            label: 'Correo',
+            placeholder: 'Ingresa tu correo',
+            value: formData.email,
+            onChange: (e) => setFormData({ ...formData, email: e.target.value }),
+        },
+        {
+            id: 'mensaje',
+            type: 'textarea',
+            label: 'Mensaje',
+            placeholder: 'Ingrese el mensaje',
+            rows: 3,
+            value: formData.mensaje,
+            onChange: (e) => setFormData({ ...formData, mensaje: e.target.value }),
+        },
+    ];
+
+    // Manejar el envío del formulario
+    const handleSubmit = () => {
+        const message = `Nombre: ${formData.name}\nCorreo: ${formData.email}\nMensaje: ${formData.mensaje}`;
+        alert(message);
+    };
+
+    // Manejar la limpieza del formulario
+    const handleClear = () => {
+        setFormData(initialFormData);
+    };
+
+    return (
+        <Container className="my-5">
+            <Text variant="h1">Contacto</Text>
+            <Text variant="p">Llena el formulario para poder contactarte</Text>
+            <DynamicForm inputs={formInputs} />
+            <div className="mt-3">
+                <Button variant="primary" onClick={handleSubmit} className="me-2">
+                    Enviar
+                </Button>
+                <Button variant="secondary" onClick={handleClear}>
+                    Limpiar
+                </Button>
+            </div>
+        </Container>
+    );
 }
 
 export default Contact;

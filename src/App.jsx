@@ -23,9 +23,9 @@ function App() {
      </Routes>
    </>
  );
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
-import 'bootstrap/dist/css/bootstrap.min.css'
+// import React from 'react'
+// import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+// import 'bootstrap/dist/css/bootstrap.min.css'
 
 // Páginas
 function Home() {
@@ -128,19 +128,4 @@ function Navbar() {
   )
 }
 
-// Componente principal de la App
-export default function App() {
-  return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/nosotros" element={<Nosotros />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/carrito" element={<Carrito />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Router>
-  )
 }
-

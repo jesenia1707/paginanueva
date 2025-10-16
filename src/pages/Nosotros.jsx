@@ -1,5 +1,5 @@
 import React from "react";
-import "../assets/css/nosotros.css"; // Tu CSS general
+import "../css/nosotros.css"; // Tu CSS general
 import productoImg from "../assets/img/productoEjemplo.webp"; // Imagen local
 
 const Nosotros = () => {
